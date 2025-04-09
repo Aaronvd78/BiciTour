@@ -1,0 +1,448 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #4CAF50; /* Main Green */
+    --primary-dark: #388E3C;  /* Darker Green */
+    --primary-light: #C8E6C9; /* Lighter Green */
+    --accent-color: #FFC107; /* Yellow Accent */
+    --text-color: #374151;   /* Dark Gray Text */
+    --text-light: #6B7280;  /* Lighter Gray Text */
+    --background-light: #f0fdf4; /* Very Light Green/Gray Background */
+    --background-section: #ffffff; /* White Section Background */
+    --border-color: #e5e7eb; /* Light Gray Border */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+body {
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.7; /* Improved line height */
+    font-size: 16px; /* Base font size */
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%); /* Gradient background */
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem 2.5rem; /* Adjusted padding */
+    border-bottom: 6px solid var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    margin: 0;
+    font-size: 2.8rem; /* Slightly larger */
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px; /* Increased letter spacing */
+}
+
+header p {
+    font-family: var(--heading-font);
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.95; /* Slightly more opaque */
+}
+
+main { /* Added styles for main */
+    max-width: 900px; /* Limit content width on larger screens */
+    margin: 0 auto; /* Center main content */
+    padding: 0 1rem; /* Padding for smaller screens */
+}
+
+section {
+    padding: 2.5rem 2rem; /* Increased padding */
+    margin: 2rem 0; /* Consistent vertical margin */
+    background-color: var(--background-section);
+    border-radius: 16px; /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07); /* Subtler shadow */
+    border: 1px solid var(--border-color); /* Subtle border */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px); /* Slightly larger lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-dark);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.8rem;
+    margin-bottom: 2rem; /* Increased margin */
+    font-weight: 700;
+    font-size: 1.9rem; /* Increased size */
+    letter-spacing: 0.5px;
+}
+
+/* --- Bike Image Section --- */
+#bikes-image {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+#bikes-image:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+#bikes-image svg {
+    width: 200px; /* Slightly larger */
+    max-width: 85%;
+    height: auto;
+    filter: drop-shadow(3px 4px 5px rgba(0, 0, 0, 0.15));
+    transition: transform 0.4s ease; /* Add transition */
+}
+
+#bikes-image svg:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+#bikes-image svg .bike-frame {
+    stroke: var(--primary-dark);
+    stroke-width: 3.5;
+}
+
+#bikes-image svg .bike-wheel {
+    stroke: #444;
+    stroke-width: 2.5;
+}
+
+#bikes-image svg .bike-spokes {
+    stroke: #999;
+    stroke-width: 0.7;
+}
+
+#bikes-image svg .bike-seat,
+#bikes-image svg .bike-pedal,
+#bikes-image svg .bike-handle {
+    fill: #222;
+}
+
+#bikes-image svg .bike-chain {
+    stroke: #555;
+    stroke-width: 1.2;
+}
+
+/* --- Map Section --- */
+#map-container {
+    padding-bottom: 1.5rem;
+}
+
+#map {
+    height: 450px;
+    width: 100%;
+    border-radius: 12px; /* Match section border-radius */
+    border: 1px solid var(--border-color);
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    overflow: hidden; /* Ensure corners are clipped */
+}
+
+/* Style for the custom map marker icon container */
+.bike-marker-icon {
+    background-color: transparent; /* Ensure no default background */
+    border: none; /* Ensure no default border */
+    border-radius: 50%;
+    padding: 2px; /* Add slight padding around SVG */
+    transition: transform 0.2s ease-in-out;
+}
+
+.bike-marker-icon:hover {
+    transform: scale(1.15); /* Scale up icon on hover */
+}
+
+/* --- Pricing Section --- */
+#pricing strong { /* Style for the price value */
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+#pricing ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+#pricing li {
+    background-color: #f8fafc; /* Slightly off-white */
+    padding: 16px 22px; /* Adjusted padding */
+    margin-bottom: 14px; /* Increased spacing */
+    border-radius: 10px;
+    border-left: 8px solid var(--primary-color);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-left-color 0.3s ease;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
+}
+
+#pricing li:hover {
+    transform: translateX(8px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-left-color: var(--accent-color); /* Change border color on hover */
+}
+
+#pricing li strong { /* Style for the plan name (e.g., $5 MXN) */
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin-right: 15px;
+    font-weight: 600;
+    min-width: 90px; /* Ensure alignment */
+    text-align: right;
+}
+
+/* --- Contact Section --- */
+#contact {
+    text-align: center;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff); /* Subtle gradient */
+}
+
+#contact h2 {
+    margin-bottom: 1.5rem;
+}
+
+#contact p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 16px 35px; /* Slightly more padding */
+    text-decoration: none;
+    border-radius: 50px; /* Fully rounded */
+    font-size: 1.3rem;
+    font-weight: 600;
+    font-family: var(--heading-font);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    margin-top: 0.5rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact-button:hover,
+.contact-button:focus {
+    background-color: var(--primary-dark);
+    transform: translateY(-4px) scale(1.02); /* Lift and slightly grow */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    outline: none; /* Remove default focus outline */
+}
+
+/* --- How It Works Section --- */
+#how-it-works ol {
+    list-style: none;
+    margin-left: 0; /* Removed default margin */
+    padding-left: 3rem; /* Adjust padding for number */
+    counter-reset: step-counter;
+}
+
+#how-it-works li {
+    margin-bottom: 1.5rem; /* Increased spacing */
+    position: relative;
+    padding-left: 15px;
+    font-size: 1.05rem;
+    line-height: 1.8; /* Improved readability */
+}
+
+#how-it-works li::before {
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    position: absolute;
+    left: -3rem; /* Adjusted position */
+    top: 0; /* Align with top of text */
+    background-color: var(--primary-color);
+    color: white;
+    width: 2.2em; /* Slightly larger */
+    height: 2.2em;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    line-height: 1; /* Adjust line-height for flex alignment */
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#how-it-works strong { /* General strong tag */
+    color: var(--primary-dark); /* Use dark green for emphasis */
+    font-weight: 700;
+}
+
+#how-it-works li strong:first-of-type { /* Specifically "Importante" */
+    color: #1976D2; /* Keep blue for important */
+    font-weight: 700;
+}
+
+#how-it-works li strong:nth-of-type(2) { /* Specifically "Nota especial" */
+    color: #d32f2f; /* Keep red for special note */
+    font-weight: 700;
+}
+
+/* --- Vision Section --- */
+#vision p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    color: var(--text-light); /* Use lighter text color */
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    margin-top: 3.5rem; /* Increased margin */
+    padding: 3rem 1rem; /* Increased padding */
+    background-color: #37474F; /* Dark Slate Gray */
+    color: #e0e0e0; /* Lighter gray for text */
+    border-top: 5px solid var(--primary-dark);
+}
+
+footer h2 {
+    color: #ffffff; /* White heading */
+    border-bottom: none; /* Remove border */
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0; /* Add bottom margin */
+}
+
+footer li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: #bdbdbd; /* Medium gray */
+}
+
+.social-links {
+    margin: 1.5rem 0 2rem; /* Adjusted margin */
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 12px; /* Increased spacing */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px) scale(1.1); /* Lift and scale */
+}
+
+.social-icon { /* Changed selector from svg to class */
+    width: 32px;
+    height: 32px;
+    fill: #bdbdbd; /* Start with medium gray */
+    transition: fill 0.3s ease;
+}
+
+.social-links a:hover .social-icon { /* Target icon within hovered link */
+    fill: var(--primary-color); /* Change fill to primary green */
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #9e9e9e; /* Darker gray for copyright */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767px) { /* Mobile styles */
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header p {
+        font-size: 1.1rem;
+    }
+    section {
+        padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
+        border-radius: 12px;
+    }
+    h2 {
+        font-size: 1.6rem;
+    }
+    #pricing li {
+        flex-direction: column; /* Stack price and description */
+        align-items: flex-start;
+    }
+    #pricing li strong {
+        margin-right: 0;
+        margin-bottom: 5px; /* Add space below price */
+        min-width: auto;
+        text-align: left;
+    }
+    #how-it-works ol {
+        padding-left: 2.5rem;
+    }
+    #how-it-works li::before {
+        left: -2.5rem; /* Adjust position for smaller screens */
+        width: 2em;
+        height: 2em;
+    }
+    .contact-button {
+        padding: 14px 28px;
+        font-size: 1.15rem;
+    }
+    #map {
+        height: 350px; /* Smaller map height */
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 17px; /* Slightly larger base font on desktop */
+    }
+    #map {
+        height: 500px;
+    }
+    #bikes-image svg {
+        width: 230px; /* Larger bike on desktop */
+    }
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Leaflet popup customization */
+.leaflet-popup-content-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.leaflet-popup-content {
+    font-family: var(--body-font);
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 10px 15px !important; /* Adjust padding */
+}
+
+.leaflet-popup-content b {
+    font-family: var(--heading-font);
+}
